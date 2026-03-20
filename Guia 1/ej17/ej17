@@ -1,0 +1,6 @@
+//a)  int v1[4] = {0}; todos 0
+//b) int v2[5] = {6};  el primero 6 el resto basura
+//c)  int v3[] = {2,4,6}; dimension 3 elementos 2 4 y 6
+//d) char s1[4] = {'h','o’,'y'}; h o y, y basura
+//e)  char s2[] = {'h','o’,'y'}; h o y \n
+//f)  char s3[4]= {'h','o’,'y','\0'}; eso
