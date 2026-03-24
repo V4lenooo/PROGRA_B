@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define max 30
 //lo unico que no termine de entender fue el puntero de largo
-void conversion(int binario[], int num, int *pL);
+void conversion(int binario[], int num, int *L);
 void muestra(int binario[], int L);
 
 int main() {
@@ -25,7 +25,7 @@ int main() {
     return 0;
 }
 
-void conversion(int binario[], int num, int *pL) {
+void conversion(int binario[], int num, int *L) {
     int i = 0;
 
     if (num == 0) {
@@ -37,7 +37,7 @@ void conversion(int binario[], int num, int *pL) {
         }
     }
 
-    *pL = i;
+    *L = i;
 }
 
 void muestra(int binario[], int L) {
