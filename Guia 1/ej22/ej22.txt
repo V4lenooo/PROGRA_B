@@ -1,0 +1,8 @@
+a) ¿Por qué no es correcta la siguiente sentencia: scanf("%s", &cad)?
+no es correcta ya que el nombre de las cadenas y vectores funciona como puntero a los mismos, entonces no se requiere el uso de &
+
+b) ¿Qué instrucción resulta conveniente para leer por teclado apellido y nombre de una persona: gets o scanf? Justificar la elección.
+gets() seria la mas conveniente ya que lee una cadena de caracteres hasta ingresar ENTER
+
+c) ¿Qué representan los valores devueltos por la función strcmp?
+-1 si son distintas(cad1 siendo menor alfabeticamente que cad2), 0 si son iguales y 1 si son distintas (cad1 siendo mayor alfabeticamente que cad2)
