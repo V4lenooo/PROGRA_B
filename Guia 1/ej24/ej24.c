@@ -7,12 +7,11 @@ promedio de la matriz*/
 #include <stdbool.h>
 
 void buscaPos (int mat[] [4], int);
-float promedioCol (int mat[] [4],int);
+void promedioCol (int mat[] [4]);
 float promTot(int mat[] [4]);
 void superaProm (int mat[] [4], float);
 
 int main() {
-    int I,J; //posicion del valor buscado
     int i,j; //variable para recorrer las filas 
     int X; // valor buscado
     float promedio;
@@ -27,9 +26,9 @@ int main() {
 
     printf("\n");
     buscaPos (mat, X);
-    if (I==-1)
+    /*if (I==-1)
         printf("no se encontro ese valor \n");
-    else
+    else*/
         
     printf("\n");
     //b)
@@ -37,9 +36,11 @@ int main() {
     printf("inciso b) \n");
     printf("\n");
 
-    for(j = 0; j <= 3; j++){
+    /*for(j = 0; j <= 3; j++){
         printf("El promedio de la columna %d es de: %5.2f \n", j, promedioCol(mat, j));
-    }
+    }*/
+   promedioCol(mat);
+
     printf("\n");
 
     //c)
@@ -57,7 +58,7 @@ int main() {
 
     //-----FUNCIONES-----//
 
-    void buscaPos (int mat[][4], int X){
+    /*void buscaPos (int mat[][4], int X){
         int j,i;
         bool encontrado = false;
 
@@ -72,18 +73,37 @@ int main() {
         if (!encontrado){
             printf("no se encontro el valor %d \n", X);
         }
+    }*/
+
+    void buscaPos (int mat[][4], int X){
+        int i = 0,j = 0;
+
+        while(i<=2 && mat[i][j] != X){
+            j = 0;
+            while(j<=3 && mat[i][j] != X)
+            j++;
+            if (mat[i][j] != X)
+                i++;
+            else 
+                printf("el valor %d se encuentra en la posicion i: %d j: %d", X, i, j);
+            
+        }
+        if(i>2 && j>3)
+        printf("no se encuentra el valor %d", X);
     }
 
-    float promedioCol (int mat[][4], int j){
-        int i,cont=0;
-        float prom=0;
-        for(i = 0; i <= 2; i++){
-            prom += mat[i] [j];
-            cont++;
+    void promedioCol (int mat[][4]){
+        int i, j, cont;
+        float prom;
+        for(j = 0; j <= 2; j++){
+            cont = 0;
+            prom = 0;
+            for(i = 0; i <= 2; i++){
+                prom += mat[i][j];
+                cont++;
+            }
+            printf("el promedio de la columna %d es: %5.2f \n", j,prom /= cont);
         }
-        prom /= cont;
-        return prom;
-
     }
 
     float promTot(int mat[][4]){
