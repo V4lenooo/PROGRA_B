@@ -12,7 +12,6 @@ float promTot(int mat[] [4]);
 void superaProm (int mat[] [4], float);
 
 int main() {
-    int i,j; //variable para recorrer las filas 
     int X; // valor buscado
     float promedio;
     int mat[3][4] = { {1,2,3,7}, {3,0,0,9}, {2,7,0,4} };
@@ -39,7 +38,7 @@ int main() {
     /*for(j = 0; j <= 3; j++){
         printf("El promedio de la columna %d es de: %5.2f \n", j, promedioCol(mat, j));
     }*/
-   promedioCol(mat);
+    promedioCol(mat);
 
     printf("\n");
 
@@ -93,16 +92,13 @@ int main() {
     }
 
     void promedioCol (int mat[][4]){
-        int i, j, cont;
+        int i, j;
         float prom;
         for(j = 0; j <= 2; j++){
-            cont = 0;
             prom = 0;
-            for(i = 0; i <= 2; i++){
+            for(i = 0; i <= 2; i++)
                 prom += mat[i][j];
-                cont++;
-            }
-            printf("el promedio de la columna %d es: %5.2f \n", j,prom /= cont);
+            printf("el promedio de la columna %d es: %5.2f \n", j,prom / 3);// num fijo de filas lol
         }
     }
 
@@ -114,7 +110,7 @@ int main() {
             for(j = 0; j <= 3; j++)
                 promedio += mat[i][j];
         }
-        promedio /= 12;
+        promedio /= 12; // wNxM
         return promedio;
 
     }
