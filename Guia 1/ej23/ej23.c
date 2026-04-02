@@ -18,6 +18,7 @@ int main(){
     fgets(cad2, max, stdin);
     cad2[strcspn(cad2, "\n")] = '\0';
     
+    
     if (strcmp(cad1,cad2) != 0)
         strcpy(cad3,cad1);
 
