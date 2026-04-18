@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "fraccionarios.h"
+//#include "fraccionarios.c"
 
 //gcc main.c fraccionarios.c -o main;  if ($?) { .\main }
 //para ejecutar
