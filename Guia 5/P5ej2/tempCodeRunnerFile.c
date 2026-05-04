@@ -1,0 +1,1 @@
+gcc main_C.c pilasDin.c -o main; if ($?) { .\main }
