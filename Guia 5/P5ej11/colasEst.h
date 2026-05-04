@@ -1,0 +1,16 @@
+#define MAX 50
+typedef struct {
+    int legajo, llegada, tiempo_de_uso;} TElementoC;
+typedef struct {
+    TElementoC datos[MAX];
+    int pri, ult; } TCola;
+
+void iniciaC (TCola * C);
+
+int vaciaC (TCola C);
+
+void poneC (TCola *C, TElementoC X);
+
+void sacaC (TCola *C, TElementoC *X);
+
+TElementoC consultaC (TCola C);
