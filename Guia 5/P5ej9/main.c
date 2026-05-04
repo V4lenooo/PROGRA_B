@@ -31,7 +31,7 @@ void lee_arch(TPila * P, const char * nombre_arch){
 
 }
 
-void void suma(TPila * P1, TPila * P2, TPila * P3){
+void suma(TPila * P1, TPila * P2, TPila * P3){
     int acarreo = 0, num1, num2, num3;
     char num_caracter1, num_caracter2;
 
